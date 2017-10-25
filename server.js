@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-
+const port = process.env.Port || 3000;
 
 var app = express();
 
@@ -32,6 +32,7 @@ app.use((req, res, next) => {
 });
 
 
+//中介層等待
 // app.use((req, res, next) => {
 //   res.render('maintenance.hbs')
 // });
@@ -71,6 +72,6 @@ app.get('/bad', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-  console.log('server is on ');
+app.listen(port, () => {
+  console.log(`server is up on ${port}`);
 });
