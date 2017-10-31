@@ -51,11 +51,21 @@ app.use(express.static(__dirname + '/public'));
 //   })
 // })
 
+
+var aasa = fs.readFileSync(__dirname + '/apple-app-site-association');
+
+app.get('/apple-app-site-association', function(req, res) {
+     res.set('Content-Type', 'application/json');
+     res.status(200).send(aasa);
+});
+
+
 app.get('/about', (req, res) => {
   res.render('about.hbs',{
     pageTitle:'About Page Yes'
   });
 });
+
 
 
 app.get('/projects', (req, res) => {
