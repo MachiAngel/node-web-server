@@ -4,7 +4,7 @@
         "details": [
             {
                 "appID": "C323KRP9PP.com.QijiNetworkTechnology.Bless",
-                "paths": [ "/link","/apple-app-site-association" ]
+                "paths": [ "*" ]
             }
         ]
     }
